@@ -1,0 +1,35 @@
+/******************************************************************************
+classe Main que usa a calculadora
+*******************************************************************************/
+public class Main {
+	public static void main(String[] args) {
+        Calculadora c = new Calculadora (4,5);
+        c.soma();
+        c.mostraResultado ();
+	}
+}
+
+
+public class Calculadora {
+    // Atributos (VARIÁVEIS)
+     int x;
+     int y;
+     int resultado;
+    
+    // Construtor= "método" especial chamado no inicio da criacao
+    public Calculadora (int a, int b) {
+        x = a;
+        y = b;
+    }
+    
+    // Métodos (FUNCIONALIDADES)
+    public void potencia () {
+        //resultado=Math.pow(x,y);
+    }
+    public void soma () {
+        resultado=x+y;
+    }
+	public void mostraResultado () {
+	    System.out.println ("Resultado=" + resultado);
+	} 
+}
