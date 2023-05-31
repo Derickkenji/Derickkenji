@@ -1,0 +1,53 @@
+/******************************************************************************
+Manipulacao de arquivos
+
+*******************************************************************************/
+#include <stdio.h>
+
+FILE *arq;
+int quantilinhas=10;
+char nomeArq[20] = "Prova.txt";
+
+void lerArquivo () { 
+  // Abre o arquivo para Leitura (r)
+    arq = fopen(nomeArq , "r");
+    
+    // Le os dados e imprime na tela
+    char linha[100], *result;
+    int i=1;
+    while (!feof(arq)) {
+      result = fgets(linha, 100, arq);
+      if (result) printf ("Linha %d > %s",i,linha);
+    }
+    fclose(arq);
+} 
+
+void gravarArquivo () {
+ 
+ // Abre o arquivo para a gravação (w)
+    arq = fopen(nomeArq, "w");
+
+ // Grava linhas no arquivo
+  for (int i = 1; i<= quantilinhas ;i++) {
+      fprintf(arq,"Conteudo da Linha %d\n",i);
+   }
+   fclose(arq);
+}
+void main() {
+   printf("\nGerando o arquivo...");
+   gravarArquivo ();
+   printf("\nLendo o arquivo...\n");
+   lerArquivo ();
+}
+    
+
+Conteudo da Linha 1
+Conteudo da Linha 2
+Conteudo da Linha 3
+Conteudo da Linha 4
+Conteudo da Linha 5
+Conteudo da Linha 6
+Conteudo da Linha 7
+Conteudo da Linha 8
+Conteudo da Linha 9
+Conteudo da Linha 10
