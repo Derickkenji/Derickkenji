@@ -1,0 +1,24 @@
+/******************************************************************************
+
+
+*******************************************************************************/
+public class Main
+{
+	public static void main(String[] args) {
+		mensagem();	
+		mensagem("que legal");	
+		mensagem("morango","bolo");	
+	  }
+    public static void mensagem() { 
+        System.out.println("Ola Mundo");
+    }
+    public static void mensagem(String m) {
+        System.out.println(m);
+    }
+    public static void mensagem(String m, String n) {
+        System.out.println(m + " " + n);
+	  }
+
+}
+
+
